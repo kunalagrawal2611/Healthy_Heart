@@ -27,5 +27,6 @@
     <string name="emergency">Emergency</string>
     <string name="positive_affirmations">Positive Affirmations</string>
     <string name="sos">SOS</string>
+    <string name="default_text">--</string>
     <string name="title_activity_maps">MapsActivity</string>
 </resources>

@@ -19,6 +19,8 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.example.healthyheart.Breathing_activity;
 import com.example.healthyheart.Friend_List;
+import com.example.healthyheart.HeartRateMonitor;
+import com.example.healthyheart.HeartbeatView;
 import com.example.healthyheart.MapsActivity;
 import com.example.healthyheart.Monitor;
 import com.example.healthyheart.Music;
@@ -28,7 +30,7 @@ import com.example.healthyheart.databinding.FragmentHomeBinding;
 
 public class HomeFragment extends Fragment{
 
-    private Button emerg_btn, sos, map_btn;
+    private Button emerg_btn, sos, map_btn, heart_check;
     private ImageView img_breath,img_music, heart_monitor;
 private FragmentHomeBinding binding;
 
@@ -46,6 +48,7 @@ private FragmentHomeBinding binding;
     img_breath = (ImageView) root.findViewById(R.id.imageView_breath);
     img_music = (ImageView) root.findViewById(R.id.imageView_music);
     heart_monitor = (ImageView) root.findViewById(R.id.imageView_monitor);
+    heart_check = (Button) root.findViewById(R.id.button2);
         if (ContextCompat.checkSelfPermission(getContext(),
                 Manifest.permission.SEND_SMS) != PackageManager.PERMISSION_GRANTED &&
                 ContextCompat.checkSelfPermission(getContext(),
@@ -55,6 +58,13 @@ private FragmentHomeBinding binding;
             ActivityCompat.requestPermissions(getActivity(),
                     new String[]{Manifest.permission.SEND_SMS, Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION}, 0);
         }
+        heart_check.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), HeartRateMonitor.class);
+                startActivity(intent);
+            }
+        });
         map_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
