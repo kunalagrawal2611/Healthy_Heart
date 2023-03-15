@@ -47,6 +47,7 @@
         <activity android:name=".Music" />
         <activity android:name=".Monitor" />
         <activity android:name=".HeartRateMonitor"/>
+        <activity android:name=".Video_player"/>
 
 
 
