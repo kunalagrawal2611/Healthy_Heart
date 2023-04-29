@@ -36,7 +36,7 @@ public class Sos extends AppCompatActivity {
             }
         }
         else {
-            Toast.makeText(getApplicationContext(), "Please Add Someone in Friend List", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Please Add Someone in Emergency List", Toast.LENGTH_SHORT).show();
             //PendingIntent.getActivity(getApplicationContext(), 0,intent, 0).cancel();
             Intent intent = new Intent(getApplicationContext(), MainActivity.class);
             startActivity(intent);

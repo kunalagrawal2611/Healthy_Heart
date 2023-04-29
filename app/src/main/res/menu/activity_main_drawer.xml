@@ -17,10 +17,6 @@
             android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/menu_hospital" />
         <item
-            android:id="@+id/nav_prediction"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_prediction" />
-        <item
             android:id="@+id/nav_rewards"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/menu_rewards" />

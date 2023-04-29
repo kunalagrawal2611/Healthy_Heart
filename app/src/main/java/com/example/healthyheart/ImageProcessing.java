@@ -3,7 +3,7 @@ package com.example.healthyheart;
 /**
  * This abstract class is used to process images.
  * 
- * @author Justin Wetherell <phishman3579@gmail.com>
+
  */
 public abstract class ImageProcessing {
 

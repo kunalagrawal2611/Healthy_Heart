@@ -48,6 +48,7 @@
         <activity android:name=".Monitor" />
         <activity android:name=".HeartRateMonitor"/>
         <activity android:name=".Video_player"/>
+        <activity android:name=".Prediction_activity"/>
 
 
 

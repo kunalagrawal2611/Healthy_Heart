@@ -24,13 +24,14 @@ import com.example.healthyheart.HeartbeatView;
 import com.example.healthyheart.MapsActivity;
 import com.example.healthyheart.Monitor;
 import com.example.healthyheart.Music;
+import com.example.healthyheart.Prediction_activity;
 import com.example.healthyheart.R;
 import com.example.healthyheart.Sos;
 import com.example.healthyheart.databinding.FragmentHomeBinding;
 
 public class HomeFragment extends Fragment{
 
-    private Button emerg_btn, sos, map_btn, heart_check;
+    private Button emerg_btn, sos, map_btn, heart_check, prediction;
     private ImageView img_breath,img_music, heart_monitor;
 private FragmentHomeBinding binding;
 
@@ -48,6 +49,7 @@ private FragmentHomeBinding binding;
     img_breath = (ImageView) root.findViewById(R.id.imageView_breath);
     img_music = (ImageView) root.findViewById(R.id.imageView_music);
     heart_monitor = (ImageView) root.findViewById(R.id.imageView_monitor);
+    //prediction = (Button) root.findViewById(R.id.prediction);
     //heart_check = (Button) root.findViewById(R.id.button2);
         if (ContextCompat.checkSelfPermission(getContext(),
                 Manifest.permission.SEND_SMS) != PackageManager.PERMISSION_GRANTED &&
@@ -106,10 +108,18 @@ private FragmentHomeBinding binding;
             @Override
             public void onClick(View view) {
                 //Functionality yet to be added
-                Intent intent = new Intent(getActivity(), Monitor.class);
+                Intent intent = new Intent(getActivity(), HeartRateMonitor.class);
                 startActivity(intent);
             }
         });
+
+//        prediction.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(getActivity(), Prediction_activity.class);
+//                startActivity(intent);
+//            }
+//        });
         //final TextView textView = binding.textHome;
         //homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;

@@ -24,12 +24,6 @@
         tools:layout="@layout/fragment_hospital" />
 
     <fragment
-        android:id="@+id/nav_prediction"
-        android:name="com.example.healthyheart.ui.prediction.PredictionFragment"
-        android:label="@string/menu_prediction"
-        tools:layout="@layout/fragment_prediction" />
-
-    <fragment
         android:id="@+id/nav_rewards"
         android:name="com.example.healthyheart.ui.rewards.RewardsFragment"
         android:label="@string/menu_rewards"
